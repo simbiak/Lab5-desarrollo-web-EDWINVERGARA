@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,10 @@
     <meta name="author" content="EDWIN ABDIEL VERGARA MEDINA - 8-758-1673">
     <meta name="description" content="Página de reproducción de video en HTML5 semántico con reproductor, información del canal, comentarios e interacciones.">
     <title>Demostración de HTML5 Semántico - MiTube</title>
-    <!-- PARTE 2: Hoja de estilos externa[cite: 2] -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- PARTE 2 Y 4: Encabezado -->
     <header>
         <a href="#">
             <img src="https://picsum.photos/120/40?random=1" alt="Logo de MiTube" width="120">
@@ -31,14 +29,9 @@
         </nav>
     </header>
 
-    <!-- Envoltorio flexible para poner main y aside lado a lado -->
     <div class="contenedor-principal">
-        
-        <!-- PARTE 3: Contenido Principal[cite: 1] -->   
         <main>
-            <!-- PARTE 5: ID de reproductor[cite: 2] -->   
             <section id="video-player">
-                <!-- Solución al Error 153: Reproductor nativo HTML5[cite: 1] -->
                 <video controls width="100%" poster="https://picsum.photos/640/360?random=10">
                     <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
@@ -62,7 +55,6 @@
                 </p>
             </section>
 
-            <!-- PARTE 4: Comentarios[cite: 1] -->
             <section>
                 <h2>Comentarios</h2>
 
@@ -101,7 +93,6 @@
             </section>
         </main>
 
-        <!-- PARTE 5: Panel Lateral[cite: 1, 2] -->
         <aside id="sugeridos">
             <h2>Videos sugeridos</h2>
 
@@ -145,17 +136,15 @@
                 </div>
             </article>
         </aside>
-
     </div>
 
-    <!-- PARTE 6: Pie de Página[cite: 1, 2] -->
     <footer id="pie">
         <ul class="navbar">
-            <li><a class="nav-link" href="#" style="color: #ffffff;">Acerca de</a></li>
-            <li><a class="nav-link" href="#" style="color: #ffffff;">Prensa</a></li>
-            <li><a class="nav-link" href="#" style="color: #ffffff;">Copyright</a></li>
-            <li><a class="nav-link" href="#" style="color: #ffffff;">Términos</a></li>
-            <li><a class="nav-link" href="#" style="color: #ffffff;">Privacidad</a></li>
+            <li><a class="nav-link" href="#">Acerca de</a></li>
+            <li><a class="nav-link" href="#">Prensa</a></li>
+            <li><a class="nav-link" href="#">Copyright</a></li>
+            <li><a class="nav-link" href="#">Términos</a></li>
+            <li><a class="nav-link" href="#">Privacidad</a></li>
         </ul>
         <p>&copy; 2026 MiTube</p>
     </footer>
