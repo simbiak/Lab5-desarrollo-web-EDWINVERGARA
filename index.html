@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="EDWIN ABDIEL VERGARA MEDINA - 8-758-1673">
+    <meta name="description" content="Página de reproducción de video en HTML5 semántico con reproductor, información del canal, comentarios e interacciones.">
+    <title>Demostración de HTML5 Semántico - MiTube</title>
+    <!-- PARTE 2: Hoja de estilos externa[cite: 2] -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- PARTE 2 Y 4: Encabezado -->
+    <header>
+        <a href="#">
+            <img src="https://picsum.photos/120/40?random=1" alt="Logo de MiTube" width="120">
+        </a>
+
+        <form action="#" role="search">
+            <input type="search" name="q" placeholder="Buscar" required>
+            <button type="submit" class="btn">Buscar</button>
+        </form>
+
+        <nav>
+            <ul class="navbar">
+                <li><a class="nav-link" href="#">Inicio</a></li>
+                <li><a class="nav-link" href="#">Suscripciones</a></li>
+                <li><a class="nav-link" href="#">Mi biblioteca</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Envoltorio flexible para poner main y aside lado a lado -->
+    <div class="contenedor-principal">
+        
+        <!-- PARTE 3: Contenido Principal[cite: 1] -->   
+        <main>
+            <!-- PARTE 5: ID de reproductor[cite: 2] -->   
+            <section id="video-player">
+                <!-- Solución al Error 153: Reproductor nativo HTML5[cite: 1] -->
+                <video controls width="100%" poster="https://picsum.photos/640/360?random=10">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+
+                <h1>Demostración de Estructura y Semántica en HTML5</h1>
+
+                <p>
+                    <span>1,234,567 visualizaciones</span> • 
+                    <time datetime="2026-08-20">20 de agosto de 2026</time>
+                </p>
+
+                <div class="info-canal">
+                    <img src="https://picsum.photos/48/48?random=2" alt="Avatar del canal" width="48">
+                    <span><strong>Canal de Desarrollo Web</strong></span>
+                    <button type="button" class="btn">Suscribirse</button>
+                </div>
+
+                <p>
+                    En este video exploramos las mejores prácticas para estructurar un sitio web moderno utilizando componentes semánticos de HTML5 y hojas de estilo CSS3.
+                </p>
+            </section>
+
+            <!-- PARTE 4: Comentarios[cite: 1] -->
+            <section>
+                <h2>Comentarios</h2>
+
+                <form action="#">
+                    <label for="comentario">Agrega un comentario público:</label><br>
+                    <textarea id="comentario" name="comentario" rows="3" placeholder="Agrega un comentario público..." required></textarea><br>
+                    <button type="submit" class="btn">Comentar</button>
+                </form>
+
+                <article class="card">
+                    <img src="https://picsum.photos/40/40?random=3" alt="Avatar de Carlos Pérez" width="40">
+                    <div>
+                        <span><strong>Carlos Pérez</strong></span>
+                        <time datetime="2026-08-21">Hace 2 días</time>
+                        <p>Excelente laboratorio. Quedó muy clara la diferencia entre el elemento main y el aside.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/40/40?random=4" alt="Avatar de María Rodríguez" width="40">
+                    <div>
+                        <span><strong>María Rodríguez</strong></span>
+                        <time datetime="2026-08-22">Ayer</time>
+                        <p>Muy útil el uso del elemento time para estructurar fechas de forma semántica.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/40/40?random=5" alt="Avatar de Juan Delgado" width="40">
+                    <div>
+                        <span><strong>Juan Delgado</strong></span>
+                        <time datetime="2026-08-23">Hace 1 hora</time>
+                        <p>Probaré este código directamente en mi navegador. ¡Gracias por la guía!</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- PARTE 5: Panel Lateral[cite: 1, 2] -->
+        <aside id="sugeridos">
+            <h2>Videos sugeridos</h2>
+
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/168/94?random=6" alt="Miniatura de Aprende CSS Grid" width="168">
+                </a>
+                <div>
+                    <h3><a href="#" class="nav-link">Aprende CSS Grid en 15 minutos</a></h3>
+                    <p>Diseño Web Pro</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/168/94?random=7" alt="Miniatura de Guía completa de Flexbox" width="168">
+                </a>
+                <div>
+                    <h3><a href="#" class="nav-link">Guía completa de Flexbox 2026</a></h3>
+                    <p>Código Abierto</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/168/94?random=8" alt="Miniatura de Introducción a JavaScript" width="168">
+                </a>
+                <div>
+                    <h3><a href="#" class="nav-link">Introducción a JavaScript Moderno</a></h3>
+                    <p>Dev Academy</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/168/94?random=9" alt="Miniatura de Accesibilidad Web" width="168">
+                </a>
+                <div>
+                    <h3><a href="#" class="nav-link">Buenas prácticas de Accesibilidad Web (a11y)</a></h3>
+                    <p>Web Standards</p>
+                </div>
+            </article>
+        </aside>
+
+    </div>
+
+    <!-- PARTE 6: Pie de Página[cite: 1, 2] -->
+    <footer id="pie">
+        <ul class="navbar">
+            <li><a class="nav-link" href="#" style="color: #ffffff;">Acerca de</a></li>
+            <li><a class="nav-link" href="#" style="color: #ffffff;">Prensa</a></li>
+            <li><a class="nav-link" href="#" style="color: #ffffff;">Copyright</a></li>
+            <li><a class="nav-link" href="#" style="color: #ffffff;">Términos</a></li>
+            <li><a class="nav-link" href="#" style="color: #ffffff;">Privacidad</a></li>
+        </ul>
+        <p>&copy; 2026 MiTube</p>
+    </footer>
+
+</body>
+</html>
