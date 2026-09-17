@@ -1,4 +1,4 @@
-/*LABORATORIO #5: HOJA DE ESTILOS CSS3 */
+/* LABORATORIO #5: HOJA DE ESTILOS CSS3*/
 
 /* PARTE 1 — SINTAXIS Y COMENTARIOS[cite: 2] */
 /* Color de fondo sencillo elegido para la página */
@@ -7,7 +7,6 @@ body {
 }
 
 /* PARTE 3 — SELECTOR UNIVERSAL (RESET GENERAL)[cite: 2] */
-/* Elimina margenes y rellenos por defecto */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +33,7 @@ header {
 .navbar {
     display: flex;
     gap: 15px;
-    list-style: none; /* Quita viñetas de las listas */
+    list-style: none;
 }
 
 .nav-link {
@@ -57,7 +56,6 @@ main {
 }
 
 /* PARTE 4 — SELECTORES DE CLASE[cite: 2] */
-/* Clase reutilizable para botones */
 .btn {
     background-color: #0056b3;
     color: #ffffff;
@@ -67,7 +65,6 @@ main {
     cursor: pointer;
 }
 
-/* Tarjetas sencillas con bordes visibles */
 .card {
     background-color: #ffffff;
     border: 1px solid #aaaaaa;
@@ -91,7 +88,6 @@ textarea {
 }
 
 /* PARTE 5 — SELECTORES DE ID[cite: 2] */
-/* Sección del reproductor principal */
 #video-player {
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
@@ -99,7 +95,6 @@ textarea {
     margin-bottom: 20px;
 }
 
-/* Panel lateral de sugeridos con tono gris */
 #sugeridos {
     width: 320px;
     background-color: #e2e8f0;
@@ -108,7 +103,6 @@ textarea {
     align-self: flex-start;
 }
 
-/* Pie de página oscuro básico */
 #pie {
     background-color: #222222;
     color: #ffffff;
@@ -127,20 +121,24 @@ textarea {
 }
 
 /* PARTE 6 — SELECTORES DE AGRUPACIÓN Y REGLAS FINALES[cite: 2] */
-/* Agrupación de títulos */
 h1, h2, h3 {
     font-family: Arial, sans-serif;
     color: #111111;
     margin-bottom: 6px;
 }
 
-/* Agrupación para estados de foco */
 input[type="search"]:focus, textarea:focus {
     outline: 2px solid #0056b3;
 }
 
-/* Ajuste de elementos multimedia */
-img, video {
+/* Selector exclusivo de tipo img requerido por la Parte 6[cite: 2] */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+video {
     max-width: 100%;
     height: auto;
     display: block;
